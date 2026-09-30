@@ -1,0 +1,107 @@
+<nav class="bg-[#121212] sticky w-full z-20 top-0 inset-s-0-0">
+  <div class="max-w-7xl flex flex-wrap items-center justify-between mx-auto py-3 px-6">
+    <a href="" class="flex gap-3 items-center space-x-3 rtl:space-x-reverse">
+      <div class="w-12 h-12 m-0">
+        <img src="/images/logo-GdqARQRt.png" class="h-full w-full" alt="Flowbite Logo" />
+      </div>
+      <div>
+        <span
+          class="self-center text-xl bg-linear-to-r bg-clip-text from-white to-neutral-300 text-transparent font-bold whitespace-nowrap"
+          >عدسة</span
+        >
+        <p class="text-xs hidden sm:block text-[#ff8904cc]">عالم التصوير الفوتوغرافي</p>
+      </div>
+    </a>
+    <div
+      class="flex justify-center gap-3 items-center md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse"
+    >
+      <button
+        class="text-neutral-500 hidden hover:text-orange-500 cursor-pointer w-11.5 h-11.5 border md:flex justify-center items-center rounded-md transition duration-300 border-transparent hover:border-[#262626]"
+        type="button"
+      >
+        <i class="fa-solid fa-magnifying-glass"></i>
+      </button>
+      <a
+        href=""
+        class="text-white text-sm font-semibold hidden md:block bg-linear-to-r from-orange-500 to-orange-600 transform hover:-translate-y-0.5 rounded-full transition duration-300 box-border border border-transparent focus:ring-4 shadow-xs leading-5 px-8 py-4"
+      >
+        ابدأ القراءة
+      </a>
+      <button
+        (click)="toggleMainBtn()"
+        type="button"
+        class="inline-flex items-center text-neutral-400 p-3 border duration-300 border-transparent justify-center text-sm rounded-base md:hidden hover:border-[#262626] hover:text-white transition cursor-pointer"
+      >
+        <span class="sr-only">Open main menu</span>
+        @if (!isMenuOpen) {
+          <i class="fa-solid fa-bars font-thin text-lg"></i>
+        } @else {
+          <i class="fa-solid fa-xmark font-thin text-lg"></i>
+        }
+      </button>
+    </div>
+    <div
+      class="items-center border border-[#262626] rounded-full justify-between hidden w-full md:flex md:w-auto md:order-1"
+    >
+      <ul
+        class="flex flex-col p-2 mt-4 font-medium border bg-transparent border-default rounded-base md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0"
+      >
+        <li class="m-0">
+          <a
+            href="#"
+            class="block text-sm font-medium transition duration-300 px-5 py-2 rounded-full md:hover:bg-transparent md:border-0 md:dark:hover:bg-transparent text-neutral-400 hover:text-white"
+            >الرئيسية</a
+          >
+        </li>
+        <li class="m-0">
+          <a
+            href="#"
+            class="block text-sm font-medium transition duration-300 rounded-full px-5 py-2 md:hover:bg-transparent md:border-0 md:dark:hover:bg-transparent text-neutral-400 hover:text-white"
+          >
+            المدونة
+          </a>
+        </li>
+        <li class="m-0">
+          <a
+            href="#"
+            class="block text-sm font-medium transition duration-300 rounded-full px-5 py-2 md:hover:bg-transparent md:border-0 md:dark:hover:bg-transparent text-neutral-400 hover:text-white"
+            >من نحن</a
+          >
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div
+    class="md:hidden absolute left-0 right-0 top-full overflow-hidden transition-all duration-300 ease-in-out"
+    [class.max-h-0]="!isMenuOpen"
+    [class.max-h-[500px]]="isMenuOpen"
+    [class.opacity-0]="!isMenuOpen"
+    [class.opacity-100]="isMenuOpen"
+  >
+    <div class="max-w-7xl mx-auto px-6 pb-6 bg-[#0a0a0a]/95">
+      <div class="flex gap-3 flex-col bg-[#161616] rounded-xl border border-[#262626] p-4">
+        <a
+          class="px-4 py-3 rounded-xl text-neutral-400 text-sm font-medium hover:text-white transition duration-300 hover:bg-[#1a1a1a]"
+          href=""
+          >الرئيسية</a
+        >
+        <a
+          class="px-4 py-3 rounded-xl text-neutral-400 text-sm font-medium hover:text-white transition duration-300 hover:bg-[#1a1a1a]"
+          href=""
+          >المدونة</a
+        >
+        <a
+          class="px-4 py-3 rounded-xl text-neutral-400 text-sm font-medium hover:text-white transition duration-300 hover:bg-[#1a1a1a]"
+          href=""
+          >من نحن</a
+        >
+        <a
+          href=""
+          class="text-white text-sm font-semibold text-center bg-linear-to-r from-orange-500 to-orange-600 transform hover:-translate-y-0.5 rounded-full transition duration-300 box-border border border-transparent focus:ring-4 shadow-xs leading-5 px-8 py-4"
+        >
+          ابدأ القراءة
+        </a>
+      </div>
+    </div>
+  </div>
+</nav>

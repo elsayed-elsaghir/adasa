@@ -1,0 +1,13 @@
+.section-label::before {
+  content: "";
+  display: inline-block;
+  height: calc(var(--spacing) * 1.5);
+  width: calc(var(--spacing) * 1.5);
+  background: rgba(249, 115, 22, 0.1);
+  border-radius: 3.40282e38px;
+  animation: 2s ease 0s infinite normal none running pulse;
+}
+.gradient-text {
+  -webkit-text-fill-color: transparent;
+  background: linear-gradient(135deg, rgb(249, 115, 22), rgb(251, 191, 36)) text;
+}
