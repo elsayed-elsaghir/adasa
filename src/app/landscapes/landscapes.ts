@@ -3,11 +3,12 @@ import { postsList } from "../data/allPosts.js";
 import { RouterLink } from "@angular/router";
 
 @Component({
-  selector: "app-about-us",
+  selector: "app-landscapes",
   imports: [RouterLink],
-  templateUrl: "./about-us.html",
-  styleUrl: "./about-us.css",
+  templateUrl: "./landscapes.html",
+  styleUrl: "./landscapes.css",
 })
-export class AboutUs {
+export class Landscapes {
   postsList = postsList;
+  category: string = "مناظر طبيعية";
 }

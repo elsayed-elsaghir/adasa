@@ -3,11 +3,12 @@ import { postsList } from "../data/allPosts.js";
 import { RouterLink } from "@angular/router";
 
 @Component({
-  selector: "app-about-us",
+  selector: "app-technologies",
   imports: [RouterLink],
-  templateUrl: "./about-us.html",
-  styleUrl: "./about-us.css",
+  templateUrl: "./technologies.html",
+  styleUrl: "./technologies.css",
 })
-export class AboutUs {
+export class Technologies {
   postsList = postsList;
+  category: string = "تقنيات";
 }

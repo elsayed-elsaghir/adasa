@@ -3,11 +3,11 @@ import { postsList } from "../data/allPosts.js";
 import { RouterLink } from "@angular/router";
 
 @Component({
-  selector: "app-about-us",
+  selector: "app-portrait",
   imports: [RouterLink],
-  templateUrl: "./about-us.html",
-  styleUrl: "./about-us.css",
+  templateUrl: "./portrait.html",
+  styleUrl: "./portrait.css",
 })
-export class AboutUs {
+export class Portrait {
   postsList = postsList;
 }
