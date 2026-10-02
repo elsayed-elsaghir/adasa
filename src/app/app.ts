@@ -7,20 +7,10 @@ import { Footer } from "./footer/footer";
 import { Blog } from "./blog/blog.js";
 import { AboutUs } from "./about-us/about-us";
 import { Article } from "./article/article";
-import { Home } from "./home/home";
 
 @Component({
   selector: "app-root",
-  imports: [
-    RouterOutlet,
-    Navbar,
-    MainPage,
-    Footer,
-    Blog,
-    AboutUs,
-    Article,
-    Home,
-  ],
+  imports: [RouterOutlet, Navbar, MainPage, Footer, Blog, AboutUs, Article],
   templateUrl: "./app.html",
   styleUrl: "./app.css",
 })

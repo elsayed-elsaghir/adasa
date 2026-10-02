@@ -1,5 +1,4 @@
 import { Routes } from "@angular/router";
-import { Home } from "./home/home.js";
 import { MainPage } from "./main-page/main-page.js";
 import { NotFound } from "./not-found/not-found.js";
 import { Blog } from "./blog/blog.js";
