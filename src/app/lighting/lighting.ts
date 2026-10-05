@@ -1,7 +1,8 @@
-import { Component } from "@angular/core";
+import { Component, inject } from "@angular/core";
 import { postsList } from "../data/allPosts.js";
 import { RouterLink } from "@angular/router";
 import { CardArticle } from "../card-article/card-article";
+import { DataService } from "../data-service.js";
 
 @Component({
   selector: "app-lighting",
@@ -10,6 +11,11 @@ import { CardArticle } from "../card-article/card-article";
   styleUrl: "./lighting.css",
 })
 export class Lighting {
-  postsList = postsList;
+  postsList;
   category: string = "إضاءة";
+
+  dataService = inject(DataService);
+  constructor() {
+    this.postsList = this.dataService.postsList;
+  }
 }

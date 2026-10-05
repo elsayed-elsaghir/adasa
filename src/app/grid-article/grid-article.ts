@@ -1,7 +1,8 @@
-import { Component } from "@angular/core";
+import { Component, inject } from "@angular/core";
 import { postsList } from "../data/allPosts.js";
 import { RouterLink } from "@angular/router";
 import { CardArticle } from "../card-article/card-article";
+import { DataService } from "../data-service.js";
 
 @Component({
   selector: "app-grid-article",
@@ -10,5 +11,10 @@ import { CardArticle } from "../card-article/card-article";
   styleUrl: "./grid-article.css",
 })
 export class GridArticle {
-  postsList = postsList;
+  postsList;
+
+  dataService = inject(DataService);
+  constructor() {
+    this.postsList = this.dataService.postsList;
+  }
 }

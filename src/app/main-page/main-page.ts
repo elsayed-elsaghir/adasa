@@ -1,7 +1,7 @@
-import { Component } from "@angular/core";
-import { postsList } from "../data/allPosts.js";
+import { Component, inject } from "@angular/core";
 import { RouterLink } from "@angular/router";
 import { CardArticle } from "../card-article/card-article";
+import { DataService } from "../data-service.js";
 
 @Component({
   selector: "app-main-page",
@@ -10,5 +10,9 @@ import { CardArticle } from "../card-article/card-article";
   styleUrl: "./main-page.css",
 })
 export class MainPage {
-  postsList = postsList;
+  postsList;
+  private readonly dataService = inject(DataService);
+  constructor() {
+    this.postsList = this.dataService.postsList;
+  }
 }
